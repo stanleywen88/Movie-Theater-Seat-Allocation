@@ -1,9 +1,9 @@
-###Summary
+### Summary
 This algorithm assigns seats within a movie theater to fulfill reservation requests. Assume the movie theater has the seating
 arrangement of 10 rows x 20 seats, which is 200 seats in total. This seat assignment program is designed to maximize both customer 
 satisfaction and customer safety. For the purpose of public safety, assume that a buffer of three seats and/or one row is required.
 
-###Input Description
+### Input Description
 You will be given a file that contains one line of input for each
 reservation request. The order of the lines in the file reflects the order in
 which the reservation requests were received. Each line in the file will be
@@ -37,7 +37,7 @@ R003 A1, A2, A3, A4
 
 R004 J4, J5, J6
 
-###Assumption: 
+### Assumption: 
 1. the number in reservation identifier determines the order for assigning seat
 2. the reservation identifiers are in non-decreasing order
 3. all seats cost the same, and the seats are first-come-first-serve
@@ -45,15 +45,15 @@ R004 J4, J5, J6
 5. All requests are under 20 seats, request for more than 20 seats are considering a large group and should inquire separately
 6. The algorithm will run until there is no more vacant seats left. 
 
-###Customer Satisfaction
+### Customer Satisfaction
 1. Customers from the same group want to sit together and have fun.
 2. The rows towards the back of the theater are more desirable
 
-###Customer safety
+### Customer safety
 A buffer of three seats is assigned between each group. If available seats are not enough for a group with buffer seats, 
 this group will be assigned to another row.
 
-###approaches:
+### Approaches:
 This algorithm uses heap to keep track from the back with rows that still have vacant seats. For example, at the beginning, 
 the top of the heap will be -10, referring to Row 10 (or Row 'J') in the theater. The heap will be updated each time before
 we assign seats for upcoming group. 
