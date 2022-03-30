@@ -78,5 +78,5 @@ Using print statement (in the comment) and the print_allocation
 2. Make sure the input file is in text format, and it's in the same folder.
 3. Make sure the data is formatted as mentioned above (i.e. "R001 3")
 4. Make sure there is no extra line or space in the input file
-5. Type the following command: python3 SeatAllocation.py <your input file name>
+5. Type the following command: python3 SeatAllocation.py your_input_file_name.txt (input.txt in this case)
 6. Output file will be created in the same folder as the python program as a text file
